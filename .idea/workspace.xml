@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e2710a-f7f8-49cc-b588-c9decd897ee9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/quant1216.github.io.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translation/02 data-engineering/01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md" beforeDir="false" afterPath="$PROJECT_DIR$/translation/02 data-engineering/01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +12,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/translation/02 data-engineering/01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="72">
-                <caret line="232" column="13" lean-forward="true" selection-start-line="232" selection-start-column="13" selection-end-line="232" selection-end-column="13" />
+              <first_editor relative-caret-position="3450">
+                <caret line="230" selection-start-line="230" selection-end-line="230" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/02 data-engineering/2019-10-17-02. Dimension Table VS Fact Table.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -32,8 +40,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/02 data-engineering/2019-10-12-01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -59,21 +67,23 @@
         <option value="$PROJECT_DIR$/_posts/2018-01-26-first-post.md" />
         <option value="$PROJECT_DIR$/translation/02 data-engineering/2019-10-12-01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/_posts/02 data-engineering/2019-10-12-01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md" />
         <option value="$PROJECT_DIR$/translation/02 data-engineering/01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md" />
+        <option value="$PROJECT_DIR$/_posts/02 data-engineering/2019-10-17-02. Dimension Table VS Fact Table.md" />
+        <option value="$PROJECT_DIR$/_posts/02 data-engineering/2019-10-12-01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="503" />
+    <option name="y" value="185" />
     <option name="width" value="1440" />
-    <option name="height" value="362" />
+    <option name="height" value="585" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -100,19 +110,6 @@
             <path>
               <item name="quant1216.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="quant1216.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="figs" type="462c0819:PsiDirectoryNode" />
-              <item name="02 data-engineering" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="quant1216.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="quant1216.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="figs" type="462c0819:PsiDirectoryNode" />
-              <item name="02 data-engineering" type="462c0819:PsiDirectoryNode" />
-              <item name="01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="quant1216.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="quant1216.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="translation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -125,7 +122,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,11 +133,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_posts/02 data-engineering" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/private_posts/02 data-engineering" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts/02 data-engineering" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -169,18 +165,22 @@
       <workItem from="1570857523223" duration="8749000" />
       <workItem from="1570868749700" duration="243000" />
       <workItem from="1570869229271" duration="502000" />
-      <workItem from="1570869883945" duration="12041000" />
+      <workItem from="1570869883945" duration="12113000" />
+      <workItem from="1571018700278" duration="117000" />
+      <workItem from="1571018830718" duration="43000" />
+      <workItem from="1571302278581" duration="173000" />
+      <workItem from="1571302481848" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21535000" />
+    <option name="totallyTimeSpent" value="21943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="503" width="1440" height="362" extended-state="0" />
+    <frame x="0" y="185" width="1440" height="585" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12660944" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -218,21 +218,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/02 data-engineering/2019-10-12-01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md">
+    <entry file="file://$PROJECT_DIR$/translation/02 data-engineering/01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <first_editor relative-caret-position="3450">
+            <caret line="230" selection-start-line="230" selection-end-line="230" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/translation/02 data-engineering/01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md">
+    <entry file="file://$PROJECT_DIR$/_posts/02 data-engineering/2019-10-12-01. How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="72">
-            <caret line="232" column="13" lean-forward="true" selection-start-line="232" selection-start-column="13" selection-end-line="232" selection-end-column="13" />
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/02 data-engineering/2019-10-17-02. Dimension Table VS Fact Table.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
