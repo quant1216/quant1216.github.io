@@ -53,7 +53,7 @@ At 30,000 feet the data platform architecture looks like Figure 1 below; a centr
 - 다양한 소비자군의 요구를 다룰 수 있도록, 신뢰있는 데이터안의 소스 데이터를 정리, 추가, 변형해라. 예를 들면, 하나의 변형은 유저의 클릭 데이터를 유저의 정보가 추가된 의미있는 세션으로 변형한다. 이것은 유저의 경험과 행동을 집계된 뷰로 다시 만들도록 시도한다. 
 - 다양한 필요성에 의해 다양한 유저에게 데이터를 전달해라. 이것은 사업 인사이트를 위한 데이터 탐험의 분석적인 소비, 머신러닝 기반의 의사 결정부터 사업의 성과를 요약한 business intelligence 보고서까지 아우른다. 우리의 미디어 스트리밍 예시를 보면, 이 플랫폼은 가까운 kafka와 같은 분산된 log 인터페이스를 통하여 거의 실시간에 전 세계적인 크리에이터들에 대한 오류와 퀄리티 정보를 전달할 수 있다. 또는 크리에이터와 레이블간의 정산을 위해 특정 크리에이터에 의해 재생된 레코드에 대한 변화가 없을 집계 뷰를 제공할 수 있다.
 
-![](../../figs/02%20data-engineering/01.%20How%20to%20Move%20Beyond%20a%20Monolithic%20Data%20Lake%20to%20a%20Distributed%20Data%20Mesh/fig1.png)
+![](../../figs/02 data-engineering/2019-10-12-01 How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh/fig1.png)
 
 It's an accepted convention that the monolithic data platform hosts and owns the data that logically belong to different domains, e.g. 'play events', 'sales KPIs', 'artists', 'albums', 'labels', 'audio', 'podcasts', 'music events', etc.; data from a large number of disparate domains. While over the last decade we have successfully applied domain driven design and bounded context to our operational systems, we have largely disregarded the domain concepts in a data platform. We have moved away from domain oriented data ownership to a centralized domain agnostic data ownership. We pride ourselves on creating the biggest monolith of them all, the big data platform.
 
