@@ -53,13 +53,13 @@ At 30,000 feet the data platform architecture looks like Figure 1 below; a centr
 - 다양한 소비자군의 요구를 다룰 수 있도록, 신뢰있는 데이터안의 소스 데이터를 정리, 추가, 변형해라. 예를 들면, 하나의 변형은 유저의 클릭 데이터를 유저의 정보가 추가된 의미있는 세션으로 변형한다. 이것은 유저의 경험과 행동을 집계된 뷰로 다시 만들도록 시도한다. 
 - 다양한 필요성에 의해 다양한 유저에게 데이터를 전달해라. 이것은 사업 인사이트를 위한 데이터 탐험의 분석적인 소비, 머신러닝 기반의 의사 결정부터 사업의 성과를 요약한 business intelligence 보고서까지 아우른다. 우리의 미디어 스트리밍 예시를 보면, 이 플랫폼은 가까운 kafka와 같은 분산된 log 인터페이스를 통하여 거의 실시간에 전 세계적인 크리에이터들에 대한 오류와 퀄리티 정보를 전달할 수 있다. 또는 크리에이터와 레이블간의 정산을 위해 특정 크리에이터에 의해 재생된 레코드에 대한 변화가 없을 집계 뷰를 제공할 수 있다.
 
-![](/figs/02 data-engineering/2019-10-12-01 How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh/fig1.png)
+![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig1.png)
 
 It's an accepted convention that the monolithic data platform hosts and owns the data that logically belong to different domains, e.g. 'play events', 'sales KPIs', 'artists', 'albums', 'labels', 'audio', 'podcasts', 'music events', etc.; data from a large number of disparate domains. While over the last decade we have successfully applied domain driven design and bounded context to our operational systems, we have largely disregarded the domain concepts in a data platform. We have moved away from domain oriented data ownership to a centralized domain agnostic data ownership. We pride ourselves on creating the biggest monolith of them all, the big data platform.
 
 단일 데이터 플랫폼은 다른 도메인에 속하는 모든 데이터에 대해 관리하고 소유헤야 하는 것은 당연한 사항이다. 예를 들어, '플레이 이벤트', '판매 KPIs', '아티스트들', '앨범', '레이블', '오디오', '팟캐스트', '음악 이벤트', etc.; 분리된 수많은 도매인들로부터의 데이터. 지난 10년동안 우리는 우리의 operational 시스템들에 도메인 기반의 디자인과 구분되는 영역들을 성공적으로 적용해왔지만, 우리는 데이터 플랫폼 안에서의 도메인 개념을 매우 무시해왔다. 우리는 도메인 기반의 데이터 소유권으로부터 중앙 집중화된 도메인의 소유권으로 움직여왔다. 우리는 모든 데이터를 다루는 우리의 단일 시스템을 만든 우리에 대해 자랑스러워한다.
 
-![](../../figs/02%20data-engineering/01.%20How%20to%20Move%20Beyond%20a%20Monolithic%20Data%20Lake%20to%20a%20Distributed%20Data%20Mesh/fig2.png)
+![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig2.png)
 
 While this centralized model can work for organizations that have a simpler domain with smaller number of diverse comsumption cases, it fails for enterprises with rich domains, a large number of sources and a diverse set of consumers. There are two pressure points on the architecture and the organizational structure of a centralized data platform that often lead to its failure:
 
@@ -85,7 +85,7 @@ Given the influence of previous generations of data platforms' architecture, arc
 
 이전 세대의 데이터 플랫폼 아키텍쳐의 영향이 있을 때, 아키텍트들은 데이터 플랫폼을 데이터 프로세싱의 과정에 따라 분리한다. 하나의 파이프라인은 매우 높은 수준에서, 데이터를 프로세싱하는 기술적인 구동 사이에 존재하는 기능적 결합을 이용한다; 즉. 수집, 준비, 집계, 전달의 능력.
 
-![](../../figs/02%20data-engineering/01.%20How%20to%20Move%20Beyond%20a%20Monolithic%20Data%20Lake%20to%20a%20Distributed%20Data%20Mesh/fig3.png)
+![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig3.png)
 
 Though this model provides some level of scale, by assigning teams to different stages of the pipeline, it has an inherent limitation that slows the delivery of features. It has high coupling between the stages of the pipeline to deliver an independent feature or value. It's decomposed orthogonally to the axis of change.
 
@@ -95,7 +95,7 @@ Let's look at our media streaming example. Internet media streaming platforms ha
 
 우리의 미디어 스트리밍 예시를 보자. 인터넷 미디어 스트리밍 플랫폼들은 그들이 제공하는 다양한 타입의 미디어들 간의 강력한 도메인 구조체를 가지고 있다. 그들은 자주 그들의 서비스를 '노래' 그리고 '앨범'과 함께 그들의 서비스를 시작하고, '음악 이벤트', '팟케스트', '라디오 쇼', '영화'와 같은 것으로 확장해나간다. '팟캐스트 재생률'과 같은 하나의 새로운 기능을 가능하게 하는 것은 파이프라인 내의 모든 단위의 변화를 요구한다. 팀들은 새로운 데이터 수집, 정제, 준비, 집계 서비스를 만들어야 한다. 이것은 다른 구성 단위간의 동기화와 팀을 넘나드는 배포 관리를 요구한다. 많은 데이터 플랫폼은 새로운 소스를 도입하는데 쓰는 에너지를 최소화하면서 새로운 소스를 쉽게 추가하고, 존재하는 소스를 수정하는 확장을 다루기 위한, 일반적이고 config 기반의 수집 서비스를 제공한다. 하지만 이것은 소비자의 관점에서 새로운 데이터셋이 추가되는 것에 대해 end2end의 의존성 관리를 제거하지 못 한다. 비록 이 글에서는 파이프라인 아키텍쳐가 파이프라인 단계를 이용하여 구조적 단위를 이룰 수 있는 것처럼 보이지만, 실제로 단일 플랫폼과 같은 전체 파이프라인은 새로운 기능을 위해 변화하고 주어져야할 가장 작은 유닛이다: 새로운 데이터를 열고, 새로운 또는 이전의 소비들도 이용 가능하도록 만드는 것. 이것은 데이터의 새로운 소비체와 소스를 다루기 위해 더 높은 속도와 크기를 가지고 싶은 우리의 능력을 제한한다.  
 
-![](../../figs/02%20data-engineering/01.%20How%20to%20Move%20Beyond%20a%20Monolithic%20Data%20Lake%20to%20a%20Distributed%20Data%20Mesh/fig4.png)
+![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig4.png)
 
 <h4>Siloed and hyper-specialized ownership <br> 한 곳으로 수집되고 매우 전문적인 집단에 의한 소유권</h4>
 
@@ -103,7 +103,7 @@ The third failure mode of today's data platforms is related to how we structure 
 
 오늘 날의 데이터 플랫폼의 세 번째 실패 경우는 플랫폼을 만들고 소유하는 팀을 어떻게 구성했는가와 관련이 있다. 우리가 데이터 플랫폼을 만들고 유지하는 사람들의 삶을 매우 가까이서 바라봤을 때, 우리는 데이터 엔지니어들이 데이터가 들어오고, 사용되고, 활동과 의사 결정을 만들어내는  operational 영역에 다 같이 있는 것을 알 수 있었다. 데이터 엔지니어들은 구조적으로 한 곳에 뭉쳐있는 것 뿐만 아니라 분리되어있고 그들의 기술 지식을 기반으로 한 곳에 묶여있다. 종종 사업 그리고 도메인에 대한 지식이 없는 상태로.
 
-![](../../figs/02%20data-engineering/01.%20How%20to%20Move%20Beyond%20a%20Monolithic%20Data%20Lake%20to%20a%20Distributed%20Data%20Mesh/fig5.png)
+![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig5.png)
 
 I personally don't envy the life of a data platform engineer. They need to consume data from teams who have no incentive in providing meaningful, truthful and correct data. They have very little understanding of the source domains that generate the data and lack the domain expertise in their teams. They need to provide data for a diverse set of needs, operational or analytical, without a clear understanding of the application of the data and access to the consuming domain's experts.
 
@@ -123,7 +123,7 @@ It embraces the ubiquitous data with a distributed Data Mesh. So what is the ans
 
 이 아키텍쳐는 분산된 데이터 메쉬를 이용하여 어디에 있는 데이터라도 받아들인다. 우리가 위에서 얘기한 실패 사례와 특성에 대해 무엇이 옳은 선택일까? 내 의견은 패러다임의 변화가 필요하다는 것이다. 패러다임은 확장성면에서 최신식 분산 아키텍쳐를 만들기 위해 가장 중요한 기술들의 교차점으로 변화한다; 이 기술은 거대한 기술 산업에서 점점 빠르게 적용해가고 있으며, 성공적인 결과를 만들어내고 있다. 나는 다음 기업 데이터 플랫폼 아키텍쳐로 분산된 도매인 기반의 아키텍쳐, 셀프 전달 플랫폼 디자인 그리고 제품 중심적 사고와 데이터가 어우러진 데이터 플랫폼 아키텍쳐를 제안한다.
 
-![](../../figs/02%20data-engineering/01.%20How%20to%20Move%20Beyond%20a%20Monolithic%20Data%20Lake%20to%20a%20Distributed%20Data%20Mesh/fig6.png)
+![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig6.png)
 
 Though this might sound like a lot of buzzwords in one sentence, each of these techniques have had a specific and incredibly positive impact in modernizing the technical foundations of operational systems. Lets deep dive into how we can apply each of these disciplines to the world of Data to escape the current paradigm, carried over from years of legacy data warehousing architecture.
 
@@ -153,7 +153,7 @@ This implies that we may duplicate data in different domains as we transform the
 
 이것은 우리가 데이터를 특정 도메인에 적합하게 변형함으로써 서로 다른 도메인에서 데이터가 중복될 수 있다는 것을 암시한다. 예를 들어 시계열 플레이 이벤트는 아티스트 그래프와 연관이 있다. 이것은 우리의 사고 방식을 옛날부터 ETL과 더욱 최근에는 이벤트 스트림을 통했던 push and ingest에서 serving and pull 모델로 변화하는 것을 요구한다. 도메인 기반의 데이터 플랫폼에서 아키텍쳐적인 단위는 도메인이고 파이프라인 단계가 아니다.
 
-![](../../figs/02%20data-engineering/01.%20How%20to%20Move%20Beyond%20a%20Monolithic%20Data%20Lake%20to%20a%20Distributed%20Data%20Mesh/fig7.png)
+![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig7.png)
 
 <h4>Source oriented domain data<br>소스 기반의 도메인 데이터</h4>
 
@@ -197,7 +197,7 @@ For example the source domains need to include the cleansing, deduplicating, enr
 
 예를 들어, 소스 도메인은 그들이 다른 도메인에서 정제 작업의 반복이 없이 사용될 수 있도록 이벤트들의 정제, 복사, 추가 과정을 포함할 필요가 있다. 각 도메인 데이터셋은 이들이 제공하는 데이터의 품질을 위해서 서비스 레벨의 수준으로 만들어야 한다 : 지연 시간, 오류율, etc. 예를 들어, '오디오 플레이 클릭스트림'을 제공하는 우리의 미디어 플레이어 도메인은 정제와 표준화 데이터 파이프라인을 가지고 있다. 이 도메인은 중복이 없는 실시간에 가까우며, 조직의 인코딩 이벤트 기준을 만족시키는 '오디오 플레이 클릭 이벤트'의 스트림을 제공한다. 동일하게, 우리는 중심화된 파이프라인의 집계 단계가 소비 도메인의 세부 구현 사항으로 바뀐 것을 볼 수 있다.
 
-![](../../figs/02%20data-engineering/01.%20How%20to%20Move%20Beyond%20a%20Monolithic%20Data%20Lake%20to%20a%20Distributed%20Data%20Mesh/fig8.png)
+![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig8.png)
 
 One might argue that this model might lead to duplicated effort in each domain to create their own data processing pipeline implementation, technology stack and tooling. I will address this concern shortly as we talk about the Convergence of Data and Platform Thinking with Self-serve shared Data Infrastructure as a Platform.
 
@@ -219,7 +219,7 @@ For a distributed data platform to be successful, domain data teams must apply p
 
 분산된 데이터 플랫폼이 성공하기 위해서, 도메인 데이터 팀들은 그들이 제공하는 데이터셋과 비슷한 수준의 엄격한 기준의 제품 지향적 사고를 적용해야만 했다; 제품으로써 그들의 데이터 자산 그리고 조직의 데이터 사이언티스트, ML, 데이터 엔지니어들까지 고려하여. 
 
-![](../../figs/02%20data-engineering/01.%20How%20to%20Move%20Beyond%20a%20Monolithic%20Data%20Lake%20to%20a%20Distributed%20Data%20Mesh/fig8.png)
+![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig8.png)
 
 Consider our example, internet media streaming business. One of its critical domains is the 'play events', what songs have been played by whom, when and where. This key domain has different consumers in the organization; for example near real-time consumers that are interested in the experience of the user and possibly errors so that in case of a degraded customer experience or an incoming customer support call can respond quickly to recover the error. There are also a few consumers that would prefer the historical snapshots of the daily, or monthly song play event aggregates.
 

@@ -32,11 +32,11 @@ DVC의 장점은 다음과 같다.
 * 의존성 그래프(dependency graph)와 ML 파이프라인에서 사용된 명령어들을 추적함으로써, 다른 환경에서도 동일한 과정을 진행할 수 있도록 해준다.
 * Git branch와 통합될 수 있다. 이는 다수의 실험이 동시에 가능하도록 한다.
 
-![](../../figs/04 architecture/2020-05-06-01 Continuous Delivery for Machine Learning/fig1.png)
+![](../../figs/04_architecture/2020-05-06-01_Continuous_Delivery_for_Machine_Learning/fig1.png)
 
 위의 파이프라인을 DVC 코드로 아래와 같이 표현된다.
 
-![](../../figs/04 architecture/2020-05-06-01 Continuous Delivery for Machine Learning/fig2.png)
+![](../../figs/04_architecture/2020-05-06-01_Continuous_Delivery_for_Machine_Learning/fig2.png)
 
 각 run은 대응되는 파일을 만들고 이것들은 version conttrol이 된다. `dvc repro` 명령문을 사용하면 다른 사람들도 동일한 파이프라인을 다시 실행할 수 있도록 한다. 또한  `dvc push`와 `dvc pull` 를 이용하여 외부 쓰토리지에 배포하거나 가져올 수 있다. 다른 오픈소스 툴로 존재하는데 Pachyderm과 MLflow Projects가 존재한다. 각 특징이 있지만 DVC는 간단한 CLI를 지원하기에 DVC를 선택하였다.
 
@@ -73,7 +73,7 @@ MLflow Models은 모델을 패키징하는 표준화된 방법을 제공하기 �
 
 CD4ML의 data, model, code를 위한 테스트 피라미드는 다음 그림으로 표현될 수 있다.
 
-![](../../figs/04 architecture/2020-05-06-01 Continuous Delivery for Machine Learning/fig3.png)
+![](../../figs/04_architecture/2020-05-06-01_Continuous_Delivery_for_Machine_Learning/fig3.png)
 
 <h3>Experiments Tracking</h3>
 ML 실험은 기존 소프트웨어 개발의 실험과 다르게 많은 모델에 대한 실험이 진행되지만 그 중 production까지 가는 모델은 소수이다. 이를 쉽게 하기 위해 저자는 DVC에서 제시되는 접근 방법을 따르기로 했다. 이는 하나의 branch가 하나의 실험을 담당하는 것이다. 또한 DVC는 다른 브런치, 태그로부터 실험 결과를 가져오고 보여주는 기능이 있다. 이처럼 다수의 브런치에서 각각 실험을 진행하는 것은 추후 merge에서 문제가 될 수 있다. 하지만 저자는 대다수의 branch가 merge되지 않을 것을 가정하기에 이는 ML 실험에 적합한 방법이다.
@@ -128,7 +128,7 @@ bias가 생길 수 있는 feature에 대하여 input/output을 분석한다.
 <h2>The End-to-End CD4ML Process</h2>
 전체 프로세스는 다음과 같다.
 
-![](../../figs/04 architecture/2020-05-06-01 Continuous Delivery for Machine Learning/fig4.png)
+![](../../figs/04_architecture/2020-05-06-01_Continuous_Delivery_for_Machine_Learning/fig4.png)
 
 <h2>Where do We Go From Here?</h2>
 
