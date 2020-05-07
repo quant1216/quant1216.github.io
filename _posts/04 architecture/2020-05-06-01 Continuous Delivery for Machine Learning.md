@@ -1,8 +1,8 @@
 ---
-title<br>"Continuous Delivery for Machine Learning"
-source<br>https://martinfowler.com/articles/cd4ml.html
-date<br>2020-05-06 08:00:00
-categories<br>data engineering
+title: "Continuous Delivery for Machine Learning"
+source: https://martinfowler.com/articles/cd4ml.html
+date: 2020-05-06 08:00:00
+categories: architecture
 ---
 <h1>Simple translation</h1>
 <h2>Introduction and Definition</h2>
