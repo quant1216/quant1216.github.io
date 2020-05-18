@@ -2,7 +2,7 @@
 title: "FeatureBranch"
 source: https://martinfowler.com/bliki/FeatureBranch.html
 date: 2020-05-07 09:00:00
-categories: architecture
+categories: basic
 ---
 <h1>Simple translation</h1>
 
