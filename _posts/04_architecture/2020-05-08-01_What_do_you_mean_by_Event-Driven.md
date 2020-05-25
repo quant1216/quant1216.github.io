@@ -4,7 +4,7 @@ source: https://martinfowler.com/articles/201701-event-driven.html
 date: 2020-05-08 09:00:00
 categories: architecture
 ---
-<h1>Simple translation</h1>
+<h1>단순 번역 및 요약</h1>
 <h2>Event Notification</h2>
 도메인 내에서의 변화에 대해서 다른 시스템에 알리기 위해 event message를 보낸다. Event notification의 주요 특성은 event를 보내는 시스템은 event를 받는 시스템의 결과에 신경을 쓰지 않는다는 것이다. 답이 없을 수도 있고 답이 있어도 이에 대해 간접적으로 반응할 것이다.
 
@@ -30,7 +30,7 @@ CQRS는 reading과 writing 데이터 구조를 분리하는 개념을 말한다.
 <h2>Making sense of these patterns</h2>
 개념에 대한 혼동과 얕은 지식을 피하기 위해 노력해달라. 저자의 예시로는 CQRS와 event-driven을 혼동하는 사람, asynchronous 기능 때문에 event-sourcing 또는 CQRS에서 문제가 많이 발생한다는 사람들을 보아서 많이 혼동스럽다고 한다. 또한 모든 좋은 기술은 적합한 곳에 쓰여야 좋은 기술이 되는 것이라는 것을 명심하길 바란다.
 
-<h1>My summary</h1>
+<h1>내 의견</h1>
 * Event-driven system에 대해서 헷갈릴 때는 Git을 잘 생각해보자.
 * Event processing이 꼭 비동기적으로 진행될 필요는 없다.
 * Domain processing과 event log은 분리되어야 한다.

@@ -4,7 +4,7 @@ source: https://emilygorcenski.com/post/data-versioning/
 date: 2020-05-07 08:00:00
 categories: architecture
 ---
-<h1>Simple translation</h1>
+<h1>단순 번역 및 요약</h1>
 Machine learniing system은 model, data, code 이 세 가지를 고려하여야 한다.
 
 <h2>Putting Intelligence into the Stack</h2>
@@ -91,7 +91,7 @@ DVC에서 사용되는 방식입니다. 데이터를 저장소에 넣으면서 s
 <h2>Conclusion</h2>
 데이터 사이언스는 상품화하기 어렵다. 그 이유는 많은 부분들이 현재 진행형이기 때문이다. AI 시스템에게 version이란 4가지 방향이 존재한다. 따라서 AI 시스템의 continuous delivery는 특히나 어렵다. 이 문제는 다뤄질 수 있고 다양한 방법에 각각 장점과 단점이 있다는 것을 알아야 한다.
 
-<h1>My summary</h1>
+<h1>내 의견</h1>
 * ML은 모델, 데이터 값, 데이터 스키마, 코드 4가지의 방향에 따른 version control이 필요하다. 
 * 모델을 코드로 다루는 것을 추천한다.
 * 데이터를 스키마와 연결시켜서 저장하는 것은 추천하지 않는다.

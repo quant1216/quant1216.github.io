@@ -4,7 +4,7 @@ source: https://martinfowler.com/articles/cd4ml.html
 date: 2020-05-06 08:00:00
 categories: architecture
 ---
-<h1>Simple translation</h1>
+<h1>단순 번역 및 요약</h1>
 <h2>Introduction and Definition</h2>
 머신러닝 개발 과정은 기존의 소프트웨어 과정보다 복잡하다. 코드 그 자체, 모델, 데이터 이 세 가지 방향으로의 변화가 있을 수 있다. 기존의 Continuous Delivery를 뛰어넘어 ML을 위한 배포 방법을 CD4ML(Continuous Delivery for Machine Learning)이라 칭하도록 하겠다.
 
@@ -156,7 +156,7 @@ Platform Thinking을 CD4ML에 적용하는 것은 ML 플랫폼과 end-to-end ML 
 
 ML 모델을 선택하고 개선하기 위해 인공지능 시스템을 진화시켜 나가는 것 또한 meta-learning 문제로 보일 수 있다. 많은 최근 연구들이 이 분야에 대해 연구하고 있다. 예를 들어 강화 학습, multi-arm bandits, online learning이 존재한다.
 
-<h1>My summary</h1>
+<h1>내 의견</h1>
 * DVC와 GoCD를 써봐야한다.
 * 모든 테스트가 통과한 뒤에도 특정 데이터 조각에 대한 테스트를 진행한다.
 * Deployment pipeline 중간에 사람이 개입하는 부분을 고려해야 한다.

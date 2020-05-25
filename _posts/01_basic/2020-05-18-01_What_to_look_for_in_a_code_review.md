@@ -4,7 +4,7 @@ source: https://google.github.io/eng-practices/review/reviewer/looking-for.html
 date: 2020-05-18 16:00:00
 categories: basic
 ---
-<h1>Simple translation</h1>
+<h1>단순 번역 및 요약</h1>
 <h2>What to look for in a code review</h2>
 <h3>Design</h3>
 * 변경 사항의 상호 작용이 이해가 되는가?
@@ -83,7 +83,7 @@ categories: basic
 
 당신에게 할당된 모든 리뷰 코드를 보며, context를 파악해라. 그리고 코드의 품질을 향상시키며 잘한 일을 한 개발자에게는 그들이 한 일에 대해서 칭찬을 해주어라.
 
-<h1>My summary</h1>
+<h1>내 의견</h1>
 * 개발자로써 Comments로 남겨야 할 것은 해당 코드의 존재 이유이다. 해당 코드가 무엇을 하는지를 쓰는 것이 아니다. 코드를 최대한 간단하게 만듦으로써 이를 comments에서 설명해야 하는 일이 없어야 한다.
 * 현재 필요하지는 않지만 미래에 필요할 것 같아서 존재해야 하는 코드는 없다.
 * Tests도 코드다. Tests 또한 일반 code와 동일한 수준의 관리를 해야 한다.
