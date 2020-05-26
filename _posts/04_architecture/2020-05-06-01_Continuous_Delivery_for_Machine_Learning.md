@@ -157,6 +157,7 @@ Platform Thinking을 CD4ML에 적용하는 것은 ML 플랫폼과 end-to-end ML 
 ML 모델을 선택하고 개선하기 위해 인공지능 시스템을 진화시켜 나가는 것 또한 meta-learning 문제로 보일 수 있다. 많은 최근 연구들이 이 분야에 대해 연구하고 있다. 예를 들어 강화 학습, multi-arm bandits, online learning이 존재한다.
 
 <h1>내 의견</h1>
+
 * DVC와 GoCD를 써봐야한다.
 * 모든 테스트가 통과한 뒤에도 특정 데이터 조각에 대한 테스트를 진행한다.
 * Deployment pipeline 중간에 사람이 개입하는 부분을 고려해야 한다.

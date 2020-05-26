@@ -31,6 +31,7 @@ CQRS는 reading과 writing 데이터 구조를 분리하는 개념을 말한다.
 개념에 대한 혼동과 얕은 지식을 피하기 위해 노력해달라. 저자의 예시로는 CQRS와 event-driven을 혼동하는 사람, asynchronous 기능 때문에 event-sourcing 또는 CQRS에서 문제가 많이 발생한다는 사람들을 보아서 많이 혼동스럽다고 한다. 또한 모든 좋은 기술은 적합한 곳에 쓰여야 좋은 기술이 되는 것이라는 것을 명심하길 바란다.
 
 <h1>내 의견</h1>
+
 * Event-driven system에 대해서 헷갈릴 때는 Git을 잘 생각해보자.
 * Event processing이 꼭 비동기적으로 진행될 필요는 없다.
 * Domain processing과 event log은 분리되어야 한다.
