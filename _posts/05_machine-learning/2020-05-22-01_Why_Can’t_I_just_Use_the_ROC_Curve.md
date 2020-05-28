@@ -68,7 +68,7 @@ Target field의 데이터의 비율이 다른 경우를 의미한다. 예를 들
 
 [The Relationship Between Precision-Recall and ROC Curves](https://ftp.cs.wisc.edu/machine-learning/shavlik-group/davis.icml06.pdf)
 
-<h1>내 의견</h1>
+<h1>나에게 하는 말</h1>
 
 * 먼저 중요하게 생각해야 할 것은 AUROC, AUPRC 모두 두 개의 모델의 성능을 비교하기 위한 지표이다. 이 때 imbalanced data에 대해서는 AUPRC를 사용해야 한다. 간단하게 예를 들어보면 쉬울 것 같다. 처음 balanced된 데이터로 TP/TN/FP/FN를 임의로 할당해보자. 이후 imbalanced data를 가정하기 위해 negative 데이터만 추가로 들어온다고 했을 때, FP와 TN은 점점 커질 것이다. 이 때 AUROC는 TPR(=TP/(TP+FN)), FPR(=FP/(TN+FP))로 구성되어 있기 때문에 negative 데이터가 추가로 들어와도 TPR과 FPR의 값이 동일하다. 즉 balance의 영향을 받지 않는다. 하지만 AUPRC는 precision(=TP/(TP+FP))와 recall(=TP/(TP+FN))로 구성되어 있기 때문에 동일한 모델의 성능이라면 skewed가 될수록 precision 값이 낮아지게 된다. 즉 balance에 영향을 받는다. 두 개의 모델을 만들었다면 imbalanced data에서 AUPRC가 더 높은 모델을 선택해야할 것이다.
 * 해당 글은 imbalanced data를 마주했을 때 사용할 수 있는 다양한 샘플링 기법에 대해 자세히 다루고 있다.

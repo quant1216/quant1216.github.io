@@ -121,7 +121,7 @@ In reality what we find are disconnected source teams, frustrated consumers figh
 
 It embraces the ubiquitous data with a distributed Data Mesh. So what is the answer to the failure modes and characteristics we discussed above? In my opinion a paradigm shift is necessary. A paradigm shift at the intersection of techniques that have been instrumental in building modern distributed architecture at scale; Techniques that the tech industry at large has adopted at an accelerated rate and that have created successful outcomes. I suggest that the next enterprise data platform architecture is in the convergence of Distributed Domain Driven Architecture, Self-serve Platform Design, and Product Thinking with Data.
 
-이 아키텍쳐는 분산된 데이터 메쉬를 이용하여 어디에 있는 데이터라도 받아들인다. 우리가 위에서 얘기한 실패 사례와 특성에 대해 무엇이 옳은 선택일까? 내 의견은 패러다임의 변화가 필요하다는 것이다. 패러다임은 확장성면에서 최신식 분산 아키텍쳐를 만들기 위해 가장 중요한 기술들의 교차점으로 변화한다; 이 기술은 거대한 기술 산업에서 점점 빠르게 적용해가고 있으며, 성공적인 결과를 만들어내고 있다. 나는 다음 기업 데이터 플랫폼 아키텍쳐로 분산된 도매인 기반의 아키텍쳐, 셀프 전달 플랫폼 디자인 그리고 제품 중심적 사고와 데이터가 어우러진 데이터 플랫폼 아키텍쳐를 제안한다.
+이 아키텍쳐는 분산된 데이터 메쉬를 이용하여 어디에 있는 데이터라도 받아들인다. 우리가 위에서 얘기한 실패 사례와 특성에 대해 무엇이 옳은 선택일까? 나에게 하는 말은 패러다임의 변화가 필요하다는 것이다. 패러다임은 확장성면에서 최신식 분산 아키텍쳐를 만들기 위해 가장 중요한 기술들의 교차점으로 변화한다; 이 기술은 거대한 기술 산업에서 점점 빠르게 적용해가고 있으며, 성공적인 결과를 만들어내고 있다. 나는 다음 기업 데이터 플랫폼 아키텍쳐로 분산된 도매인 기반의 아키텍쳐, 셀프 전달 플랫폼 디자인 그리고 제품 중심적 사고와 데이터가 어우러진 데이터 플랫폼 아키텍쳐를 제안한다.
 
 ![](../../figs/02_data-engineering/2019-10-12-01_How_to_Move_Beyond_a_Monolithic_Data_Lake_to_a_Distributed_Data_Mesh/fig6.png)
 

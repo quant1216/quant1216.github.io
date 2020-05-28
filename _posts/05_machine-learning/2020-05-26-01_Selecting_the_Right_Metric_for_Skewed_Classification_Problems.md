@@ -6,4 +6,4 @@ categories: machine-learning
 ---
 <h1>단순 번역 및 요약</h1>
 
-<h1>내 의견</h1>
+<h1>나에게 하는 말</h1>

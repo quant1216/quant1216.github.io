@@ -26,7 +26,7 @@ PI는 또한 오픈소스에서 문제가 발생한다. 다른 사람이 뭘하�
 
 당신이 사용하는 툴과 당신이 선택한 integration 전략은 서로 독립적이라는 것을 아는 것이 매우 중요하다. 많은 사람들이 DVCS를 feature branching으로 생각하는데 이것은 CI가 쓰일 수도 있다. 당신이 해야할 것은 repository의 하나의 branch를 mainline으로 정하는 것이다. 만약 모든 사람들이 매일 그 branch에 pull/push를 진행한다면 이것은 CI mainline이 되는 것이다. 실제로 능숙한 팀들과 함께라면 나는 CI와 DVCS를 더 선호한다. 그렇지 않은 팀이라면 DVCS는 점점 길어지는 branch를 만들 수 있다. 반면에 centralized VCS와 branch reluctance(branch에 대한 비익숙함)는 그들 자신이 더욱 mainline에 자주 commit하도록 만들 것이다. Paul Hammant : "I wonder though, if a team should not be adept with trunk-based development before they move to distributed."
 
-<h1>내 의견</h1>
+<h1>나에게 하는 말</h1>
 
 * CI/PI에 대한 정확한 개념 없이 상황에 따라 맞춰 사용해왔던 것 같다.
 * Feature를 넣고 빼는 작업이 용이한, 단순하게 시간 순서에만 구애받지 않는 기술 구현의 중요성에 대해 생각하게 되었다.
