@@ -72,7 +72,7 @@ Description의 나머지 부분들은 유용한 정보를 제공해야 합니다
 <h3>Review the description before submitting the CL</h3>
 Review가 진행되는 동안 CL에 큰 변경 사항이 있을 수 있습니다. CL을 제출하기 전에 CL description이 변경 사항을 잘 반영하고 있는지 점검하는 것은 매우 중요합니다.
 
-<h1>내 의견</h1>
+<h1>나에게 하는 말</h1>
 
 * CL description의 첫 번째 줄이 매우 중요하다.
 * 관습적으로 명령문으로 작성한다.
